@@ -3,8 +3,11 @@
     <div class="col-sm-8 col-sm-offset-2">
       <article>
         <h1><%= @article.title  %>
-        <%= link_to "✏", edit_article_path  %>
-        <%= link_to "🗑", article_path(@article), method: :delete, data: { confirm: "Really delete #{@article.title}?" } %>
+        <small>
+          <%= link_to "✏", edit_article_path  %>
+          <%= link_to "🗑", article_path(@article), method: :delete, data: { confirm: "Really delete #{@article.title}?" } %>
+        </small>
+
         </h1>
         <p><%= @article.content %></p>
       </article>
